@@ -7,7 +7,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class PublicKey {
-    String e;
-    String n;
+public class RSA {
+    String message;
+    String keyIndex;
 }

@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PrivateKey {
-    String e;
+    String d;
     String n;
 }
