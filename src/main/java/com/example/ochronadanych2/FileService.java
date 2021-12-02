@@ -132,14 +132,12 @@ public class FileService {
     public static Map<String, KeyPair> getKeyPairs() throws IOException {
         List<PrivateKey> privateKeys = getPrivateKeys();
         List<PublicKey> publicKeys = getPublicKeys();
-        List<KeyPair> keyPairs = new ArrayList<>();
         Map<String, KeyPair> map = new HashMap<>();
         if(privateKeys.size() == publicKeys.size()){
             for (int i = 0; i < privateKeys.size(); i++) {
                 KeyPair.KeyPairBuilder builder = KeyPair.builder();
                 builder.publicKey(publicKeys.get(i));
                 builder.privateKey(privateKeys.get(i));
-//                keyPairs.add(builder.build());
                 map.put(String.valueOf(i), builder.build());
             }
             return map;
